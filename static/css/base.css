@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('') no-repeat center center fixed;
+    background: url('/media/door1.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
@@ -64,10 +64,6 @@ body {
     margin-top: 48px;
     padding-left: 25px;
     height: 125px
-}
-
-.navbar-nav { 
-    
 }
 
 /* -------------------------------- Media Queries */
