@@ -76,6 +76,9 @@ body {
 	z-index: -1;
 }
 
+.product-details-container {
+    padding-top: 50px !important;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -96,6 +99,23 @@ body {
     }
 
     .header-container {
-        padding-top: 164px;
+        padding-top: 225px;
+    }
+}
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
+}
+
+@media (max-width: 766px) {
+    .product-details-container {
+        padding-top: 1px !important;
     }
 }
