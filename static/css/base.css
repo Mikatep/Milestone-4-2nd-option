@@ -60,6 +60,16 @@ body {
     background: #000 !important;
 }
 
+#logo {
+    margin-top: 48px;
+    padding-left: 25px;
+    height: 125px
+}
+
+.navbar-nav { 
+    
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
