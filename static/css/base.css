@@ -194,6 +194,11 @@ a.category-badge > span.badge:hover {
     font-family: 'DynaPuff', cursive;
 }
 
+.banner-font, .form-check-label {
+    color: #fff !important;
+    font-family: 'DynaPuff', cursive;
+}
+
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
     color: #000; /* text-secondary */
@@ -244,6 +249,45 @@ a.category-badge > span.badge:hover {
 	color: #17a2b8; 
 }
 
+footer {
+    color: #fafafa;
+    font-family: 'DynaPuff', cursive;
+}
+
+#footer-bar {
+    background-color: #000;
+    min-height: 110px;
+}
+
+#footer-bar h3 {
+  font-family: 'DynaPuff', cursive;
+  color: #e37100;
+}
+
+#about, #social {
+  padding: 25px;
+  font-weight: bold;
+  text-align: justify;
+}
+
+#social ul {
+  text-align: center;
+}
+
+.list-inline-item p strong {
+    color: #e37100;
+}
+
+.social-links li a i {
+  padding-top: 35px;
+  font-size:  25px;
+  color: #e37100;
+  transition: all 0.35s ease-in-out;
+}
+
+.social-links li a i:hover {
+  color: #fff;
+}
 
 /* -------------------------------- Media Queries */
 
