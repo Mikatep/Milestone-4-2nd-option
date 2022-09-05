@@ -291,9 +291,10 @@ footer {
   color: #fff;
 }
 
-#account-div {
-    min-height: 550px;
+#account-div, #bag {
+    min-height: 550px !important;
 }
+
 
 /* -------------------------------- Media Queries */
 
