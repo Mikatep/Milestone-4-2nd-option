@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-p%x&3z+kb_t0z+32u=6gvs*o=57fc7l5-zuizooq5vem$jg9+2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['minuitmilestone4.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -121,12 +121,18 @@ WSGI_APPLICATION = 'minuit.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('postgres://miwysggbzinnrh:cf1c623a0c2de973f3541120a4eda17fa4ca7dff8c6f93a4b78396e0083ae149@ec2-99-80-170-190.eu-west-1.compute.amazonaws.com:5432/d3nt644mrgna3e'))
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 
 # Password validation
@@ -187,3 +193,5 @@ DEFAULT_FROM_EMAIL = 'minuit@example.com'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+ACCOUNT_EMAIL_VERIFICATION = 'none'
