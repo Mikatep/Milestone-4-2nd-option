@@ -13,7 +13,7 @@ import dj_database_url
 
 import os
 if os.path.exists("env.py"):
-  import env
+    import env
 
 from pathlib import Path
 
@@ -28,7 +28,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+## DEBUG = 'DEVELOPMENT' in os.environ
+
+DEBUG = False
 
 ALLOWED_HOSTS = ['minuitmilestone4.herokuapp.com', 'localhost']
 
@@ -123,7 +125,7 @@ WSGI_APPLICATION = 'minuit.wsgi.application'
 
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
-        'default': dj_database_url.parse('postgres://miwysggbzinnrh:cf1c623a0c2de973f3541120a4eda17fa4ca7dff8c6f93a4b78396e0083ae149@ec2-99-80-170-190.eu-west-1.compute.amazonaws.com:5432/d3nt644mrgna3e')
+        'default': dj_database_url.parse('postgres://panvhzso:qjH6E6v2FVztcmIGOOMH1L-F20TsfbMK@lucky.db.elephantsql.com/panvhzso')
     }
 else:
     DATABASES = {
